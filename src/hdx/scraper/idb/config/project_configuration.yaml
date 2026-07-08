@@ -1,0 +1,115 @@
+# Collector specific configuration
+
+metadata_url: "https://data.iadb.org/api/3/action/package_show?id=98a5b747-7c01-4476-a283-6832ea136072"
+
+notes: "The Social Indicators of Latin America and the Caribbean datasets offer a comprehensive view of social development trends across 21 countries in the region, spanning from 1990 to the present. This unique database compiles and standardizes social indicators using national household surveys, census data, and other validated sources, providing a robust foundation for regional comparisons."
+
+datasets:
+  Demography:
+    resources:
+      - Total population
+      - Percentage of men in population
+      - Percentage of women in population
+      - Percentage of the population under age 18 (Census)
+      - Percentage of population ages 65 and above (Census)
+    tags:
+      - population
+      - gender
+  Urban Population:
+    resources:
+      - Percentage of population residing in urban areas (Census)
+      - Percentage of population residing in rural areas (Census)
+    tags:
+      - population
+      - urban
+  Households:
+    resources:
+      - Average household size (Census)
+      - Percentage of households with female economic heads (Census)
+    tags:
+      - population
+      - gender
+      - socioeconomics
+  Poverty and Inequality:
+    resources:
+      - Percentage of the population in extreme poverty
+      - Percentage of the population in moderate poverty
+      - Percentage of the population in vulnerability
+    tags:
+      - population
+      - poverty
+  Housing:
+    resources:
+      - Percent of households that use an improved general water source
+      - Percent of households with exclusive access to sanitation facilities
+      - Percentage of households with electricity (Census)
+    tags:
+      - water sanitation and hygiene-wash
+  School Attendance:
+    resources:
+      - Overage primary school attendance rate (Census)
+    tags:
+      - education
+  Healthcare Access:
+    resources:
+      - Healthcare Access and Quality Index (Index value (0 to 100))
+    tags:
+      - health
+  Imports and Exports:
+    resources:
+      - Volume of imports of goods and services
+      - Volume of exports of goods and services
+    tags:
+      - economics
+  Employment:
+    resources:
+      - Percentage of unemployed population (Unemployment rate)
+    tags:
+      - population
+      - employment
+  Disability:
+    resources:
+      - Percentage of people with disabilities (Washington Group)
+    tags:
+      - population
+      - disability
+  Migrants:
+    resources:
+      - Migrants as percentage of total population
+      - Migrants residing in country for 5 or more years as a percentage of the total population
+      - Percentage of migrants in population (Census)
+    tags:
+      - population
+      - migration
+  Gini Coefficient:
+    resources:
+      - Gini Index for wage per hour
+      - Gini index for household per capita Income
+      - Gini index for household per capita income (Census)
+    tags:
+      - socioeconomics
+  School Infrastructure:
+    resources:
+      - Percentage with access to schools with water, 3 grade
+      - Percentage with access to schools with water, 6 grade
+      - Percentage with access to schools with electricity, 3 grade
+      - Percentage with access to schools with electricity, 6 grade
+      - Percentage with access to schools with internet, 3 grade
+      - Percentage with access to schools with internet, 6 grade
+    tags:
+      - education facilities-schools
+  Mortality Rate:
+    resources:
+      - Neonatal mortality rate per 1000 live births)
+      - Under-five mortality rate per 1000 live births
+      - Infant mortality rate per 1000 live births
+    tags:
+      - mortality
+  Immunisation Coverage:
+    resources:
+      - Measles-containing-vaccine first-dose (MCV1) immunization coverage among 1-year-olds (%)
+      - BCG immunization coverage among 1-year-olds (%)
+      - Diphtheria tetanus toxoid and pertussis (DTP3) immunization coverage among 1-year-olds (%)
+      - Hepatitis B (HepB3) immunization coverage among 1-year-olds (%)
+    tags:
+      - vaccination-immunization
