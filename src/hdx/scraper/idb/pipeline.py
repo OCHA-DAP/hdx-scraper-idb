@@ -32,12 +32,11 @@ class Pipeline:
 
         datasets = []
         for name, dataset_info in self._configuration["datasets"].items():
-            dataset_title = (
-                f"Social Indicators of Latin America and the Caribbean: {name}"
-            )
+            dataset_title = f"Latin America and the Caribbean: Housing and Social Indicators - {name}"
+            dataset_name = slugify(f"IDB-{name}")
             dataset = Dataset(
                 {
-                    "name": slugify(dataset_title),
+                    "name": dataset_name,
                     "title": dataset_title,
                 }
             )

@@ -25,15 +25,15 @@ class TestPipeline:
                 )
                 pipeline = Pipeline(configuration, retriever, tempdir)
                 datasets = pipeline.generate_datasets()
-                assert len(datasets) == 15
+                assert len(datasets) == 14
 
                 dataset = datasets[0]
                 dataset.update_from_yaml(
                     path=join(config_dir, "hdx_dataset_static.yaml")
                 )
                 assert dataset == {
-                    "name": "social-indicators-of-latin-america-and-the-caribbean-demography",
-                    "title": "Social Indicators of Latin America and the Caribbean: Demography",
+                    "name": "idb-demography",
+                    "title": "Latin America and the Caribbean: Housing and Social Indicators - Demography",
                     "dataset_date": "[1990-01-01T00:00:00 TO 2025-01-01T23:59:59]",
                     "tags": [
                         {
@@ -80,8 +80,8 @@ class TestPipeline:
                     "dataset_source": "Inter-American Development Bank",
                     "package_creator": "HDX Data Systems Team",
                     "private": False,
-                    "maintainer": "aa13de36-28c5-47a7-8d0b-6d7c754ba8c8",
-                    "owner_org": "hdx",
+                    "maintainer": "09842f0d-7005-4430-9675-9de547e68d84",
+                    "owner_org": "2df1d0ff-527b-4707-8b10-6a87d0cdab26",
                     "data_update_frequency": 90,
                 }
 

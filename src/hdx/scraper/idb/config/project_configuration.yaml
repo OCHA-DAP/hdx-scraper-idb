@@ -15,7 +15,7 @@ datasets:
     tags:
       - population
       - gender
-  Urban Population:
+  Urban and Rural Population:
     resources:
       - Percentage of population residing in urban areas (Census)
       - Percentage of population residing in rural areas (Census)
@@ -45,11 +45,6 @@ datasets:
       - Percentage of households with electricity (Census)
     tags:
       - water sanitation and hygiene-wash
-  School Attendance:
-    resources:
-      - Overage primary school attendance rate (Census)
-    tags:
-      - education
   Healthcare Access:
     resources:
       - Healthcare Access and Quality Index (Index value (0 to 100))
@@ -88,8 +83,9 @@ datasets:
       - Gini index for household per capita income (Census)
     tags:
       - socioeconomics
-  School Infrastructure:
+  Education indicators:
     resources:
+      - Overage primary school attendance rate (Census)
       - Percentage with access to schools with water, 3 grade
       - Percentage with access to schools with water, 6 grade
       - Percentage with access to schools with electricity, 3 grade
@@ -97,6 +93,7 @@ datasets:
       - Percentage with access to schools with internet, 3 grade
       - Percentage with access to schools with internet, 6 grade
     tags:
+      - education
       - education facilities-schools
   Mortality Rate:
     resources:
