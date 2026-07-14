@@ -32,8 +32,8 @@ class TestPipeline:
                     path=join(config_dir, "hdx_dataset_static.yaml")
                 )
                 assert dataset == {
-                    "name": "idb-demography",
-                    "title": "Latin America and the Caribbean: Housing and Social Indicators - Demography",
+                    "name": "idb-demographic-social-indicators",
+                    "title": "Latin America and the Caribbean: Demographic social indicators",
                     "dataset_date": "[1990-01-01T00:00:00 TO 2025-01-01T23:59:59]",
                     "tags": [
                         {
