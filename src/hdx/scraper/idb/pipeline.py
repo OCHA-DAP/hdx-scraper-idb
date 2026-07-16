@@ -51,6 +51,7 @@ class Pipeline:
                 self._configuration["notes"]
                 + "  \n  \nThis dataset includes the following indicators:  \n"
                 + "  \n".join(resource_list)
+                + "  \n  \nFor links to individual indicator metadata and methodologies, see resource descriptions."
             )
 
             # Add resources
