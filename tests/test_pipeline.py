@@ -88,6 +88,12 @@ class TestPipeline:
                 resources = dataset.get_resources()
                 assert resources == [
                     {
+                        "name": "Total population",
+                        "description": "Total population",
+                        "url": "https://data.iadb.org/file/download/efd7fe33-f9b9-4109-bd2b-c0b0df4e023c",
+                        "format": "csv",
+                    },
+                    {
                         "name": "Percentage of men in population",
                         "description": "Percentage of men in population",
                         "url": "https://data.iadb.org/file/download/15adc7a1-a792-4158-9e1c-01af59efbc8f",
@@ -97,12 +103,6 @@ class TestPipeline:
                         "name": "Percentage of women in population",
                         "description": "Percentage of women in population",
                         "url": "https://data.iadb.org/file/download/ae8777c6-83ac-4457-b1b9-a82a814a209e",
-                        "format": "csv",
-                    },
-                    {
-                        "name": "Total population",
-                        "description": "Total population",
-                        "url": "https://data.iadb.org/file/download/efd7fe33-f9b9-4109-bd2b-c0b0df4e023c",
                         "format": "csv",
                     },
                     {

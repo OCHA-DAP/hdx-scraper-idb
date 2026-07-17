@@ -60,6 +60,16 @@ class Pipeline:
             ]
             if len(resources_info) < len(resource_names):
                 logger.error(f"{name}: not all resources listed in config were found")
+            if len(resources_info) > len(resource_names):
+                for i, r in enumerate(resources_info):
+                    r["name"] = f"{r['name']} ({i + 1})"
+                    resources_info[i] = r
+            if len(resources_info) == len(resource_names):
+                resources_info_names = [r["name"] for r in resources_info]
+                resources_order = [
+                    resources_info_names.index(name) for name in resource_names
+                ]
+                resources_info = [resources_info[index] for index in resources_order]
             for resource_info in resources_info:
                 resource = {
                     "name": resource_info["name"],
