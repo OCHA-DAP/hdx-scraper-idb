@@ -22,6 +22,7 @@ class Pipeline:
         metadata = self._retriever.download_json(self._configuration["metadata_url"])
         metadata = metadata["result"]
 
+        # TODO: get dates from each csv instead of entire dataset
         start_date = metadata["temporal_start"]
         end_date = metadata["temporal_end"]
         isos = []
