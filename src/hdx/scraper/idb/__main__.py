@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 
 _LOOKUP = "hdx-scraper-idb"
 _SAVED_DATA_DIR = "saved_data"  # Keep in repo to avoid deletion in /tmp
-_UPDATED_BY_SCRIPT = "HDX Scraper: Idb"
+_UPDATED_BY_SCRIPT = "HDX Scraper: IDB"
 
 
 def main(
