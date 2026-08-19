@@ -22,9 +22,6 @@ class Pipeline:
         metadata = self._retriever.download_json(self._configuration["metadata_url"])
         metadata = metadata["result"]
 
-        # TODO: get dates from each csv instead of entire dataset
-        start_date = metadata["temporal_start"]
-        end_date = metadata["temporal_end"]
         isos = []
         for location in metadata["spatial_coverage"]:
             country_name = location["label"]["en"]
@@ -42,7 +39,6 @@ class Pipeline:
                 }
             )
 
-            dataset.set_time_period(start_date, end_date)
             dataset.add_tags(dataset_info["tags"])
             dataset.add_country_locations(isos)
 
@@ -71,14 +67,24 @@ class Pipeline:
                     resources_info_names.index(name) for name in resource_names
                 ]
                 resources_info = [resources_info[index] for index in resources_order]
+
+            resource_years = set()
             for resource_info in resources_info:
+                download_url = resource_info["url"]
                 resource = {
                     "name": resource_info["name"],
                     "description": resource_info["description"],
-                    "url": resource_info["url"],
+                    "url": download_url,
                     "format": "csv",
                 }
                 dataset.add_update_resource(resource)
+                headers, rows = self._retriever.get_tabular_rows(
+                    download_url, format="csv"
+                )
+                year_i = headers.index("year")
+                for row in rows:
+                    resource_years.add(row[year_i])
+            dataset.set_time_period_year_range(min(resource_years), max(resource_years))
             datasets.append(dataset)
 
         return datasets
