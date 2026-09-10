@@ -34,7 +34,7 @@ class TestPipeline:
                 assert dataset == {
                     "name": "idb-demographic-social-indicators",
                     "title": "Latin America and the Caribbean: Demographic social indicators",
-                    "dataset_date": "[1960-01-01T00:00:00 TO 2023-12-31T23:59:59]",
+                    "dataset_date": "[1986-01-01T00:00:00 TO 2026-12-31T23:59:59]",
                     "tags": [
                         {
                             "name": "population",
@@ -90,31 +90,31 @@ class TestPipeline:
                     {
                         "name": "Total population",
                         "description": "Total population",
-                        "url": "https://data.iadb.org/file/download/efd7fe33-f9b9-4109-bd2b-c0b0df4e023c",
+                        "url": "https://data.iadb.org/datastore/dump/99decb38-0d70-439f-9cd2-c5bb87b918a1?bom=True&format=csv",
                         "format": "csv",
                     },
                     {
                         "name": "Percentage of men in population",
                         "description": "Percentage of men in population",
-                        "url": "https://data.iadb.org/file/download/15adc7a1-a792-4158-9e1c-01af59efbc8f",
+                        "url": "https://data.iadb.org/datastore/dump/a77e7278-09ca-4f0a-9aaa-9189069869e9?bom=True&format=csv",
                         "format": "csv",
                     },
                     {
                         "name": "Percentage of women in population",
                         "description": "Percentage of women in population",
-                        "url": "https://data.iadb.org/file/download/ae8777c6-83ac-4457-b1b9-a82a814a209e",
+                        "url": "https://data.iadb.org/datastore/dump/9d637d47-3934-40d8-a460-c676e60dee46?bom=True&format=csv",
                         "format": "csv",
                     },
                     {
                         "name": "Percentage of the population under age 18 (Census)",
                         "description": "Percentage of the population under 18 years of age (Census)",
-                        "url": "https://data.iadb.org/file/download/4cf9b5ca-7e18-49f8-b15c-022fc7857bf9",
+                        "url": "https://data.iadb.org/datastore/dump/9ba6863e-8d99-480e-b723-e2e40439de71?bom=True&format=csv",
                         "format": "csv",
                     },
                     {
                         "name": "Percentage of population ages 65 and above (Census)",
                         "description": "Percentage population 65 years of age or older (Census)",
-                        "url": "https://data.iadb.org/file/download/f3a76e7b-6e14-4274-840d-6e841de87407",
+                        "url": "https://data.iadb.org/datastore/dump/97811ec4-8743-4c98-8323-0d45af35bb69?bom=True&format=csv",
                         "format": "csv",
                     },
                 ]
