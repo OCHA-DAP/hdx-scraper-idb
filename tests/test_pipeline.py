@@ -34,7 +34,7 @@ class TestPipeline:
                 assert dataset == {
                     "name": "idb-demographic-social-indicators",
                     "title": "Latin America and the Caribbean: Demographic social indicators",
-                    "dataset_date": "[1986-01-01T00:00:00 TO 2026-12-31T23:59:59]",
+                    "dataset_date": "[1986-01-01T00:00:00 TO 2026-09-09T23:59:59]",
                     "tags": [
                         {
                             "name": "population",
@@ -82,7 +82,7 @@ class TestPipeline:
                     "private": False,
                     "maintainer": "09842f0d-7005-4430-9675-9de547e68d84",
                     "owner_org": "2df1d0ff-527b-4707-8b10-6a87d0cdab26",
-                    "data_update_frequency": 90,
+                    "data_update_frequency": 365,
                 }
 
                 resources = dataset.get_resources()
