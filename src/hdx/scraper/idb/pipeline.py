@@ -23,7 +23,7 @@ class Pipeline:
         metadata = metadata["result"]
 
         start_date = metadata["temporal_start"]
-        end_date = metadata["temporal_end"]
+        end_date = metadata["metadata_modified"]
 
         isos = []
         for location in metadata["spatial_coverage"]:
