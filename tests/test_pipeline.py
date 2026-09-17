@@ -34,7 +34,7 @@ class TestPipeline:
                 assert dataset == {
                     "name": "idb-demographic-social-indicators",
                     "title": "Latin America and the Caribbean: Demographic social indicators",
-                    "dataset_date": "[1986-01-01T00:00:00 TO 2026-09-09T23:59:59]",
+                    "dataset_date": "[1986-01-01T00:00:00 TO 2026-09-07T23:59:59]",
                     "tags": [
                         {
                             "name": "population",
