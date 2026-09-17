@@ -6,6 +6,7 @@ import logging
 from hdx.api.configuration import Configuration
 from hdx.data.dataset import Dataset
 from hdx.location.country import Country
+from hdx.utilities.dateparse import parse_date
 from hdx.utilities.retriever import Retrieve
 from slugify import slugify
 
@@ -23,7 +24,6 @@ class Pipeline:
         metadata = metadata["result"]
 
         start_date = metadata["temporal_start"]
-        end_date = metadata["metadata_modified"]
 
         isos = []
         for location in metadata["spatial_coverage"]:
@@ -42,7 +42,6 @@ class Pipeline:
                 }
             )
 
-            dataset.set_time_period(start_date, end_date)
             dataset.add_tags(dataset_info["tags"])
             dataset.add_country_locations(isos)
 
@@ -72,7 +71,9 @@ class Pipeline:
                 ]
                 resources_info = [resources_info[index] for index in resources_order]
 
+            end_dates = []
             for resource_info in resources_info:
+                end_dates.append(parse_date(resource_info["last_modified"]))
                 download_url = f"https://data.iadb.org/datastore/dump/{resource_info['id']}?bom=True&format=csv"
                 resource = {
                     "name": resource_info["name"],
@@ -81,6 +82,7 @@ class Pipeline:
                     "format": "csv",
                 }
                 dataset.add_update_resource(resource)
+            dataset.set_time_period(start_date, max(end_dates))
             datasets.append(dataset)
 
         return datasets
